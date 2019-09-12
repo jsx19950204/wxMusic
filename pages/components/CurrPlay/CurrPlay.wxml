@@ -1,0 +1,12 @@
+<!-- 页面下部的最小化播放器 -->
+<view class="play-min-wrap">
+  <image src="{{currPlay.imageSrc}}"></image>
+  <view class="info">
+    <text class="title">{{currPlay.title}}</text>
+    <text class="name">{{currPlay.name}}</text>
+  </view>
+  <view class="play-icon">
+    <canvas canvas-id="canvas" style="width: 100px; height: 100px;"></canvas>
+  </view>
+  <view class="list-icon">圈</view>
+</view>

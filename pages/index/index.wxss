@@ -1,0 +1,170 @@
+/**index.wxss**/
+header-component{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60px;
+}
+
+main-info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600rpx;
+  transform: translateX(-600rpx);
+  transition: transform ease-in-out .3s;
+  z-index: 11;
+}
+main-info.show{
+  transform: translateX(0);
+}
+main-info.show .main-info .bg{
+  opacity: 0.5;
+}
+
+swiper-component{
+  width: 100%;
+}
+
+.nav-btn-wrap{
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  padding:0 10rpx 30rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.nav-btn-wrap .item{
+  flex: 1;
+  text-align: center;
+}
+.nav-btn-wrap .item image{
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}
+.nav-btn-wrap .item text{
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.music-list-block{
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 40rpx;
+}
+.music-list-block .header{
+  display: flex;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.music-list-block .header .title{
+  flex: 1;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.music-list-block .header .nav{
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 30rpx;
+  text-align: right;
+  margin-top: 30rpx;
+  border: 1px solid #ddd;
+  border-radius: 60rpx;
+  font-size: 30rpx;
+}
+.music-list-block .content{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.music-list-block .content .item{
+  position: relative;
+  flex: 0 0 30%;
+  padding-bottom: 30rpx;
+}
+.music-list-block .content .item image{
+  width: 100%;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.music-list-block .content .item .description{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  font-size: 28rpx;
+}
+.music-list-block .content .item .viewNum{
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+/* 页面最下部播放器 */
+.play-min-wrap{
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120rpx;
+  padding: 0 20rpx;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  z-index: 7;
+}
+.play-min-wrap image{
+  flex: 0 0 90rpx;
+  height: 90rpx;
+  margin: 15rpx 20rpx 0 0;
+}
+.play-min-wrap .info{
+  flex: 1;
+  padding: 10rpx 0;
+}
+.play-min-wrap .info text{
+  display: block;
+  line-height: 40rpx;
+  color: #888;
+  font-size: 24rpx;
+}
+.play-min-wrap .info .title{
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+.play-min-wrap .play-icon,
+.play-min-wrap .list-icon{
+  flex: 0 0 100rpx;
+  margin-top: 30rpx;
+}
+.play-min-wrap .play-icon canvas{
+  width: 60rpx;
+  height: 60rpx;
+}
+.play-min-wrap .list-icon{
+  margin-top: 20rpx;
+}
+.play-min-wrap .list-icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+curr-play-profile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+}

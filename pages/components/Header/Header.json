@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "switch-component": "/pages/components/Switch/Switch"
+  }
+}

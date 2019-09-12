@@ -1,0 +1,13 @@
+<!--pages/components/Header/Header.wxml-->
+<view class="header-wrap">
+  <view class="main-info">
+    <image src="/static/icon/main_info.png" bindtap="openMainInfo"></image>
+  </view>
+  <switch-component 
+    tabs="{{tabs}}"
+    bind:tabChange="tabChange"
+  ></switch-component>
+  <view class="search">
+    <image src="/static/icon/search.png" bindtap="openSearch"></image>
+  </view>
+</view>

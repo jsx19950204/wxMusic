@@ -1,0 +1,14 @@
+/* pages/components/Background/Background.wxss */
+.bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  opacity: 0;
+  transition: opacity ease-in-out .3s;
+  z-index: 10;
+}
+.show{
+  opacity: 0.5;
+}

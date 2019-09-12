@@ -1,0 +1,78 @@
+<view class="curr-play-profile">
+  <view class="header">
+    <view class="back">
+      <image
+        src="/static/icon/back.png"
+        bindtap="closePage"
+      ></image>
+    </view>
+    <view class="title">
+      <text class="name">Dusk</text>
+      <text>Peter Jeremias</text>
+    </view>
+    <image class="share" src="/static/icon/share.png"></image>
+  </view>
+  <view class="main-content">
+    <!-- 图片模式 -->
+    <view class="img-mode">
+      <view class="dash-border">
+        <image src="{{currPlay.imageSrc}}"></image>
+      </view>
+      <view class="operate-container">
+        <view class="heart">
+          <image src="/static/icon/heart.png"></image>
+        </view>
+        <view class="download">
+          <image src="/static/icon/download.png"></image>
+        </view>
+        <view class="sound-effect">
+          <image src="/static/icon/sound_effect.png"></image>
+        </view>
+        <view class="comment">
+          <image src="/static/icon/comment.png"></image>
+          <text class="comment-num"></text>
+        </view>
+        <view class="operate">
+          <image src="/static/icon/operate.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 歌词模式 -->
+    <view class="word-mode"></view>
+  </view>
+  <!-- 进度条 -->
+  <view class="progress-wrap">
+    <view class="used-time">{{usedTime}}</view>
+    <view
+      class="progress-bar-wrap"
+      bind:tap="changeProgress"
+      bind:touchstart="progressTouchstart"
+      bind:touchmove="progressTouchmove"
+    >
+      <view class="progress-bar">
+        <view class="actual-progress" style="width: {{progress}}px;">
+          <view class="dot"></view>
+        </view>
+      </view>
+    </view>
+    <view class="total-time">{{totalTime}}</view>
+  </view>
+  <!-- 操作区域 -->
+  <view class="footer">
+    <!-- 歌曲模式 -->
+    <view class="music-mode">
+      <image src="/static/icon/musicMode.png"></image>
+    </view>
+    <view class="operate">
+      <image class="prev" src="/static/icon/prev-music-icon.png"></image>
+      <view class="play-state">
+        <image src="/static/icon/play-music-icon.png"></image>
+      </view>
+      <image class="next" src="/static/icon/next-music-icon.png"></image>
+    </view>
+    <!-- 当前列表 -->
+    <view class="curr-list">
+      <image src="/static/icon/list-icon-white.png"></image>
+    </view>
+  </view>
+</view>

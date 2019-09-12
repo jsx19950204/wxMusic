@@ -1,0 +1,65 @@
+<view class="search-page">
+  <!-- 头部搜索框 -->
+  <view class="header">
+    <image class="back" src="/static/icon/back-grey.png"></image>
+    <view class="search-input">
+      <input placeholder="{{placeholder}}"></input>
+    </view>
+    <image class="singer" src="/static/icon/singer.png"></image>
+  </view>
+  <!-- 广告区 -->
+  <view class="ad-wrap">
+    <image class="ad" src="/static/素材/1.jpg"></image>
+    <text class="label">广告</text>
+    <image
+      class="close-btn"
+      bing:tap="closeAd"
+    ></image>
+  </view>
+  <!-- 历史记录 -->
+  <view class="history-wrap">
+    <view class="title-wrap">
+      <text class="title">历史记录</text>
+      <image
+        class="clear"
+        bind:tap="clearHistory"
+      ></image>
+    </view>
+    <view class="list">
+      <block
+        wx:for="historyList"
+        wx:key="index"
+      >
+        <view class="item">
+          <text>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 热搜榜 -->
+  <view class="hot-search">
+    <view class="title">
+      <text>热搜榜</text>
+    </view>
+    <view class="list">
+      <block
+        wx:for="hotSearchList"
+        wx:key="index"
+      >
+        <view class="item">
+          <view class="ranking {{index < 3 ? 'excellent' : ''}}">{{index + 1}}</view>
+          <view class="content">
+            <view class="title">
+              <text class="name">{{item.musicName}}</text>
+              <text class="count">{{item.searchCount}}</text>
+              <text class="hot" wx:if="{{item.isHot}}">HOT</text>
+            </view>
+            <view class="desc">
+              <text>{{item.desc}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

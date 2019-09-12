@@ -1,0 +1,64 @@
+<view class="main-info">
+  <view class="content">
+    <view class="head-wrap">
+      <image class="head-image" src="{{headSrc}}"></image>
+      <view class="head-info">
+        <view class="user-info">
+          <text class="user-name">{{userName}}</text>
+          <text class="user-level">Lv.{{userLevel}}</text>
+        </view>
+        <view class="sign-in" bindtap="signIn">
+          <image src="/static/素材/1.jpg"></image>
+          <text>签到</text>
+        </view>
+      </view>
+    </view>
+    <view class="content-wrap">
+      <view class="function-wrap">
+        <view wx:for="{{functionList}}" wx:for-item="function" wx:key="{{item.url}}" data-date="item">
+          <image src="{{function.imageSrc}}"></image>
+          <view class="title">{{function.title}}</view>
+          <view wx-if="{{function.messageNum}}">{{function.messageNum}}</view>
+        </view>
+      </view>
+      <view class="block">
+        <view 
+          class="item"
+          wx:for="{{blockList1}}"
+          wx:key="{{item.url}}"
+        >
+          <image src="{{item.imageSrc}}"></image>
+          <text class="title">{{item.title}}</text>
+          <text class="detail">{{item.detail}}</text>
+          <text class="unread" wx:if="{{item.unread}}"></text>
+        </view>
+      </view>
+      <view class="block">
+        <view 
+          class="item"
+          wx:for="{{blockList1}}"
+          wx:key="{{item.url}}"
+        >
+          <image src="{{item.imageSrc}}"></image>
+          <text class="title">{{item.title}}</text>
+          <text class="detail">{{item.detail}}</text>
+          <text class="unread" wx:if="{{item.unread}}"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="item">
+      <image src="/static/素材/1.jpg"></image>
+      <text>夜间模式</text>
+    </view>
+    <view class="item">
+      <image src="/static/素材/1.jpg"></image>
+      <text>退出</text>
+    </view>
+    <view class="item">
+      <image src="/static/素材/1.jpg"></image>
+      <text>设置</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view class="container">
+    <header-component 
+      bind:openMainInfo="openMainInfo"
+      bind:openSearch="openSearch"
+      bind:tabChange="tabChange"
+    ></header-component>
+
+    <main-info
+      class="{{mainInfoVisible ? 'show' : ''}}"
+    ></main-info>
+
+    <swiper-component></swiper-component>
+
+    <view class="nav-btn-wrap">
+      <navigator class="item" url="/pages/components/MainInfo/MainInfo">
+        <image src="/static/icon/dayRecommend.png"></image>
+        <text>每日推荐</text>
+      </navigator>
+      <navigator class="item" url="/pages/components/MainInfo/MainInfo">
+        <image src="/static/icon/musicList.png"></image>
+        <text>歌单</text>
+      </navigator>
+      <navigator class="item" url="/pages/components/MainInfo/MainInfo">
+        <image src="/static/icon/rankingList.png"></image>
+        <text>排行榜</text>
+      </navigator>
+      <navigator class="item" url="/pages/components/MainInfo/MainInfo">
+        <image src="/static/icon/radioStation.png"></image>
+        <text>电台</text>
+      </navigator>
+      <navigator class="item" url="/pages/components/MainInfo/MainInfo">
+        <image src="/static/icon/liveBroadcast.png"></image>
+        <text>直播</text>
+      </navigator>
+    </view>
+
+    <view class="music-list-block">
+      <view class="header">
+        <text class="title">推荐歌单</text>
+        <view class="nav">歌单广场</view>
+      </view>
+      <view class="content">
+        <block
+          wx:for="{{musicList}}"
+          wx:for-item="music"
+        >
+          <view class="item">
+            <image src="{{music.imageSrc}}"></image>
+            <text class="description">{{music.description}}</text>
+            <text class="viewNum">{{music.viewNum}}</text>
+          </view> 
+        </block>
+      </view>
+    </view>
+
+    <!-- 页面下部的最小化播放器 -->
+    <view class="play-min-wrap" bindtap="openCurrPlayProfile">
+      <image src="{{currPlay.imageSrc}}"></image>
+      <view class="info">
+        <text class="title">{{currPlay.title}}</text>
+        <text class="name">{{currPlay.name}}</text>
+      </view>
+      <view class="play-icon">
+        <canvas
+          canvas-id="canvas"
+          style="width: 60rpx; height: 60rpx;"
+          catchtap="playMusic"
+        ></canvas>
+      </view>
+      <view class="list-icon">
+        <image src="/static/icon/list_icon.png"></image>
+      </view>
+    </view>
+
+    <curr-play-profile
+      wx:if="{{currPlay.profile}}"
+      bind:closeCurrPlayProfile="closeCurrPlayProfile"
+    ></curr-play-profile>
+
+    <background
+      mainInfoVisible="{{mainInfoVisible}}"
+      bind:closeMainInfo="closeMainInfo"
+      transitionDuration="{{300}}"
+    ></background>
+</view>

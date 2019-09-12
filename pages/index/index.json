@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "header-component": "/pages/components/Header/Header",
+    "main-info": "/pages/components/MainInfo/MainInfo",
+    "background": "/pages/components/Background/Background",
+    "swiper-component": "/pages/components/Swiper/Swiper",
+    "curr-play": "/pages/components/CurrPlay/CurrPlay",
+    "curr-play-profile": "/pages/components/CurrPlayProfile/CurrPlayProfile"
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "网易云"
+  }
+}

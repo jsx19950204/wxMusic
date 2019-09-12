@@ -1,0 +1,31 @@
+/* pages/components/Header/Header.wxss */
+.header-wrap{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 40rpx;
+}
+
+.main-info{
+  flex: 1;
+}
+.main-info image{
+  width: 40rpx;
+  height: 32rpx;
+  margin-top: 12rpx;
+}
+
+switch-component{
+  display: flex;
+  flex: 4;
+}
+
+.search{
+  flex: 1;
+}
+.search image{
+  float: right;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,32 @@
+/* pages/components/Swiper/Swiper.wxss */
+.swiper-wrap{
+  position: relative;
+  width: 100%;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+}
+.swiper-wrap image{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 14rpx;
+}
+
+.dots-wrap{
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 70rpx;
+  width: calc(100% - 80rpx);
+  text-align: center;
+}
+.dots-wrap .dots{
+  display: inline-block;
+  margin: 0 5rpx;
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .3);
+}
+.dots-wrap .dots.active{
+  background: #f00;
+}

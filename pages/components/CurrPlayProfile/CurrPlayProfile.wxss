@@ -1,0 +1,176 @@
+.curr-play-profile{
+  min-height: 100vh;
+  padding: 0 30rpx;
+  color: #fff;
+  background: #000;
+  z-index: 8;
+}
+.header{
+  display: flex;
+  height: 80rpx;
+  justify-content: space-between;
+}
+.header .back{
+  flex: 0 0 100rpx;
+}
+.header .back image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+.header .title{
+  flex: 1;
+}
+.header .title text{
+  display: block;
+  font-size: 24rpx;
+  color: #888;
+  line-height: 30rpx;
+}
+.header .title .name{
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #fff;
+}
+.header .share{
+  flex: 0 0 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+}
+
+.main-content{
+  position: relative;
+  height: calc(100vh - 320rpx);
+}
+.main-content .word-mode{
+  display: none;
+}
+.main-content .img-mode{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.main-content .dash-border{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400rpx;
+  height: 400rpx;
+  margin: -220rpx 0 0 -200rpx;
+  border: 2px dashed #fff;
+  border-radius: 50%;
+}
+.main-content .dash-border image{
+  width: 360rpx;
+  height: 360rpx;
+  margin: 20rpx;
+  background: #f00;
+  border-radius: 50%;
+}
+.main-content .operate-container{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+.main-content .operate-container view{
+  flex: 0 0 50rpx;
+}
+.main-content .operate-container image{
+  width: 100%;
+  height: 50rpx;
+}
+
+.progress-wrap{
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 20rpx;
+  line-height: 20rpx;
+  bottom: 200rpx;
+  justify-content: space-between;
+}
+.progress-wrap .used-time,
+.progress-wrap .total-time{
+  flex: 0 0 100rpx;
+  font-size: 20rpx;
+  text-align: center;
+}
+.progress-wrap .progress-bar-wrap{
+  width: 100%;
+  height: 100%;
+}
+.progress-wrap .progress-bar{
+  flex: 1;
+  height: 2px;
+  margin-top: 9rpx;
+  background: #999;
+  border-radius: 2px;
+}
+.progress-wrap .progress-bar .actual-progress{
+  position: relative;
+  border-radius: 2px;
+  height: 2px;
+  background: #f00;
+}
+
+.progress-wrap .progress-bar .actual-progress .dot{
+  position: absolute;
+  right: -7rpx;
+  top: -4rpx;
+  width: 16rpx;
+  height: 16rpx;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.footer{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150rpx;
+  padding: 0 50rpx;
+}
+.footer .music-mode,
+.footer .curr-list{
+  flex: 0 0 170rpx;
+}
+.footer .music-mode image,
+.footer .curr-list image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 18rpx;
+}
+.footer .music-mode image{
+  margin-top: 18rpx;
+}
+.footer .curr-list image{
+  float: right;
+}
+.footer .operate{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .operate .play-state{
+  flex: 1;
+}
+.footer .operate .play-state image{
+  display: block;
+  margin: 0 auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+.footer .operate .prev,
+.footer .operate .next{
+  flex: 0 0 50rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+}

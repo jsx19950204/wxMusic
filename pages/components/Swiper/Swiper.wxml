@@ -1,0 +1,23 @@
+<view class="swiper-wrap">
+  <swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    indicator-active-color="#f00"
+    current="{{current}}"
+    bindchange="{{change}}"
+    bindanimationfinish="animationfinish"
+  >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots-wrap">
+    <block wx:for="{{imgUrls}}">
+      <view class="dots {{current === index ? 'active' : ''}}"></view>
+    </block>
+  </view>
+</view>

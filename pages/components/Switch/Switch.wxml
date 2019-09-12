@@ -1,0 +1,5 @@
+<block wx:for="{{tabs}}" wx:for-item="tab" wx:key="tab.url">
+  <view class="tab-item" bindtap="tabChange" data-tab="{{tab}}" data-index="{{index}}">
+    <text class="{{index === currIndex ? 'active' : ''}} {{tab.unread ? 'unread' : ''}}">{{ tab.text }}</text>
+  </view>
+</block>
